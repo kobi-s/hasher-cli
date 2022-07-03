@@ -1,5 +1,5 @@
 const { getHeaders } = require('../config')
-const config = require('../_config/account_config.json')
+const config = require('../config/account_config.json')
 const axios = require('axios')
 const Table = require('cli-table');
 const chalk = require('chalk')
