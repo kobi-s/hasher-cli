@@ -35,7 +35,7 @@ const newCampiganQuestions = [
     },
     {
         message: "Which algorithm to set: (Hash-Mode of Hashcat)",
-        type: 'number',
+        type: 'text',
         name: 'hash-type'
     },
     {
