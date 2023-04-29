@@ -9,9 +9,8 @@ const handleError = require('../helper/errorHandler');
 
 async function startNewCampigan(params) {
     try {
-        const hashFileKey = params['hash-file-key'].replace("'", '')
+        let hashFileKey = params['hash-file-key'].replace(/'/g, '');
         const { data } = await uploadHashFile(hashFileKey)
-
         params['hash-file-key'] = data.key
         params['client'] = 'cli'
         params['hashcat_config'] = {}
@@ -83,6 +82,7 @@ async function getNewCampiganHelpers() {
 
 
 async function uploadHashFile(pathFile) {
+
     const formData = new FormData();
     formData.append('file', fs.createReadStream(pathFile))
 

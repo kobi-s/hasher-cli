@@ -30,7 +30,6 @@ program.command('new')
             prompt(questions)
             .then(answers => startNewCampigan(answers))   
         } catch (error) {
-            console.log(error);
             handleError(error)
         }
     })
