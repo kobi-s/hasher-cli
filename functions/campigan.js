@@ -9,7 +9,8 @@ const handleError = require('../helper/errorHandler');
 
 async function startNewCampigan(params) {
     try {
-        const { data } = await uploadHashFile(params['hash-file-key'])
+        const hashFileKey = params['hash-file-key'].replace("'", '')
+        const { data } = await uploadHashFile(hashFileKey)
 
         params['hash-file-key'] = data.key
         params['client'] = 'cli'
