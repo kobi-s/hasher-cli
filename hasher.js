@@ -6,7 +6,7 @@ const { startNewCampigan, getCampigans, getNewCampiganHelpers, deleteCampigan, g
 const handleError = require("./helper/errorHandler");
 
 program.version(require('./package.json').version)
-program.description('Ha$h3r CLI - Distributed Hash Cracking Tool')
+program.description(`Ha$h3r CLI ${require('./package.json').version} - Distributed Hash Cracking Tool`)
 
 program.command('new')
     .description('Start new campigan')
