@@ -52,13 +52,6 @@ program.command('stop')
         cancelCampaigan(id);
     })
 
-// program.command('delete')
-//     .argument('<id>')
-//     .description('Delete campaign by id')
-//     .action((id)=> {
-//         deleteCampigan(id);
-//     })
-
 program.command('config')
     .description('Config your Ha$h3r account')
     .action(() => {
